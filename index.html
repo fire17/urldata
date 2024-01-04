@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic URL Data</title>
+</head>
+<body>
+    <h2>Data Found:</h2>
+    <h4 id="originalPath"></h4>
+    <h2>Processed:</h2>
+    <h4 id="processedPath"></h4>
+
+    <script>
+        // Get the current URL path
+        const currentPath = window.location.pathname;
+
+        // Display the original path
+        document.getElementById('originalPath').textContent = currentPath;
+
+        // Process the path by replacing slashes with spaces
+        const processedPath = currentPath.replace(/\//g, ' ');
+        document.getElementById('processedPath').textContent = `"${processedPath}"`;
+    </script>
+</body>
+</html>
